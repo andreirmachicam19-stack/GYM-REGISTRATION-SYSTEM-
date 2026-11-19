@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>GymRegistrationApp</RootNamespace>
+    <AssemblyName>GymRegistrationApp</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="L&amp;HApparel/**/*.cs" />
+    <Compile Remove="AttendanceApi/**/*.cs" />
+    <Compile Remove="**/obj/**/*.cs" />
+    <Compile Remove="**/bin/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".github\copilot-instructions.md" />
+    <None Update="appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="cloudflared.exe" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="26.7.0" />
+    <PackageReference Include="NuGet.Frameworks" Version="7.9.0" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+  </ItemGroup>
+</Project>
